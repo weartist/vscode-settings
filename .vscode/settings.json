@@ -7,7 +7,7 @@
   "editor.minimap.enabled": false,
   "editor.guides.bracketPairs": "active",
   "editor.cursorSurroundingLines": 5,
-  // "files.autoSaveDelay": 3000,
+  "files.autoSaveDelay": 3000,
   "files.eol": "\n",
   "files.simpleDialog.enable": true,
   "files.insertFinalNewline": true,
