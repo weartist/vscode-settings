@@ -100,7 +100,7 @@
   "editor.cursorSmoothCaretAnimation": "off",
   "editor.find.addExtraSpaceOnTop": false,
   // 是否启用字体连字
-  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
+  "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "editor.fontWeight": 440,
   "editor.fontFamily": "Fira Code",
@@ -288,20 +288,9 @@
   "eslint.packageManager": "pnpm",
   "stylelint.packageManager": "pnpm",
   "npm.packageManager": "pnpm",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+
 
   // python
-  "[python]": {
-    "editor.formatOnType": true
-  },
   "python.languageServer": "Pylance",
   "python.analysis.autoImportCompletions": true,
   "python.autoComplete.extraPaths": [
@@ -311,6 +300,16 @@
   "python.linting.flake8Args": ["--max-line-length=200"],
 
 
+  // formatter
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
