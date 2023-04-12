@@ -1,76 +1,12 @@
 {
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "python.linting.flake8Enabled": true,
-  "python.linting.flake8Args": ["--max-line-length=200"],
-  "terminal.integrated.profiles.osx": {
-    "bash": {
-      "path": "bash",
-      "args": [
-        "-l"
-      ],
-      "icon": "terminal-bash"
-    },
-    "zsh": {
-      "path": "zsh",
-      "args": [
-        "-l"
-      ]
-    },
-    "fish": {
-      "path": "fish",
-      "args": [
-        "-l"
-      ]
-    },
-    "tmux": {
-      "path": "tmux",
-      "icon": "terminal-tmux"
-    },
-    "pwsh": {
-      "path": "pwsh",
-      "icon": "terminal-powershell"
-    },
-    "nu": {
-      "path": "/opt/homebrew/bin/nu"
-    }
-  },
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "editor.cursorSurroundingLines": 11,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "audioCues.volume": 0,
-  "python.languageServer": "Pylance",
-  "python.analysis.autoImportCompletions": true,
-  "python.autoComplete.extraPaths": [
-    "${workspaceFolder}/venv"
-  ],
-  "python.analysis.extraPaths": [],
-  "window.zoomLevel": 1,
-  "settingsSync.ignoredExtensions": [
-  
-  ],
   // common
   // 辅助模式
   "editor.accessibilitySupport": "off",
   "editor.suggestSelection": "recentlyUsed",
   "editor.stickyScroll.enabled": true,
   "editor.minimap.enabled": false,
+  "editor.guides.bracketPairs": "active",
+  "editor.cursorSurroundingLines": 5,
   // "files.autoSaveDelay": 3000,
   "files.eol": "\n",
   "files.simpleDialog.enable": true,
@@ -124,9 +60,42 @@
   "terminal.integrated.fontWeightBold": "bold",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.tabs.enabled": true,
-
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": [
+        "-l"
+      ],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": [
+        "-l"
+      ]
+    },
+    "fish": {
+      "path": "fish",
+      "args": [
+        "-l"
+      ]
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    },
+    "nu": {
+      "path": "/opt/homebrew/bin/nu"
+    }
+  },
 
   // UI相关
+  "window.zoomLevel": 1,
   "editor.cursorSmoothCaretAnimation": "off",
   "editor.find.addExtraSpaceOnTop": false,
   // 是否启用字体连字
@@ -144,6 +113,9 @@
   "workbench.fontAliasing": "auto",
   "workbench.list.smoothScrolling": false,
   "workbench.sideBar.location": "left",
+
+  // volume
+  "audioCues.volume": 0,
   
   // debug
   "debug.onTaskErrors": "debugAnyway",
@@ -311,9 +283,34 @@
   "prettier.semi": false,
   "javascript.preferences.importModuleSpecifier": "project-relative",
   "typescript.preferences.importModuleSpecifier": "project-relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "eslint.packageManager": "pnpm",
   "stylelint.packageManager": "pnpm",
-  "npm.packageManager": "pnpm"
+  "npm.packageManager": "pnpm",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // python
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "python.languageServer": "Pylance",
+  "python.analysis.autoImportCompletions": true,
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/venv"
+  ],
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--max-line-length=200"],
 
 
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
 }
