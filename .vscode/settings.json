@@ -7,6 +7,7 @@
   "editor.minimap.enabled": false,
   "editor.guides.bracketPairs": "active",
   "editor.cursorSurroundingLines": 5,
+  "editor.maxTokenizationLineLength": 1000000000000000000000000000000000000,
   "files.autoSave": "onWindowChange",
   // "files.autoSaveDelay": 3000,
   "files.eol": "\n",
@@ -38,49 +39,36 @@
     "**/.yarn": true,
     "**/logs": true,
     "**/tmp": true,
-    "**/package-lock.json": true,
+    "**/package-lock.json": true
   },
-
-
   // 删除时候是否二次确认
   "explorer.confirmDelete": false,
   // 拖拽文件是否二次确认
   "explorer.confirmDragAndDrop": false,
-
-
   // git
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "git.enableSmartCommit": true,
-  "git.untrackedChanges": "separate",
-
+  // "git.autofetch": true,
+  // "git.confirmSync": false,
+  // "git.enableSmartCommit": true,
+  // "git.untrackedChanges": "separate",
   // terminal
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.fontWeightBold": "bold",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.profiles.osx": {
     "bash": {
       "path": "bash",
-      "args": [
-        "-l"
-      ],
+      "args": ["-l"],
       "icon": "terminal-bash"
     },
     "zsh": {
       "path": "zsh",
-      "args": [
-        "-l"
-      ]
+      "args": ["-l"]
     },
     "fish": {
       "path": "fish",
-      "args": [
-        "-l"
-      ]
+      "args": ["-l"]
     },
     "tmux": {
       "path": "tmux",
@@ -94,67 +82,70 @@
       "path": "/opt/homebrew/bin/nu"
     }
   },
-
-  // UI相关
-  "window.zoomLevel": 1,
+  "window.dialogStyle": "custom",
+  "window.nativeTabs": true,
   "editor.cursorSmoothCaretAnimation": "off",
   "editor.find.addExtraSpaceOnTop": false,
-  // 是否启用字体连字
-  "editor.fontLigatures": true,
   "editor.tabSize": 2,
-  "editor.fontWeight": 440,
-  "editor.fontFamily": "Fira Code",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.inlineSuggest.enabled": true,
-  "editor.lineNumbers": "interval",
+  "editor.lineNumbers": "on",
   "editor.renderWhitespace": "all",
-  "window.dialogStyle": "custom",
   "workbench.colorTheme": "Vitesse Light Soft",
-  // 控制渲染字体的方式，auto为判断是否是高dpi屏来决定如何渲染
-  "workbench.fontAliasing": "auto",
   "workbench.list.smoothScrolling": false,
   "workbench.sideBar.location": "left",
-
+  // vscode theme color format https://code.visualstudio.com/api/references/theme-color#color-formats
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#b5d69b", //选中高亮
+    "editor.stackFrameHighlightBackground": "#fff27f7d",
+    "editor.selectionHighlightBorder": "#28a6c5",
+    "editorCursor.foreground": "#657b83",
+    "tab.activeBackground": "#b5d69b",
+    "tab.activeBorderTop": "#00000000"
+    // "editor.background": "#fdf6e3",
+    // "tab.hoverBackground": "#fdf6e3",
+    // "sideBar.background": "#fdf6e3",
+    // "terminal.background": "#fdf6e3"
+    // "editor.lineHighlightBackground": "#14524e", //光标所在行高亮内容的背景颜色
+    // "editor.lineHighlightBorder": "#9c162600", //光标所在行四周边框的背景颜色
+  },
+  // font
+  "debug.console.fontFamily": "FiraCode-Retina",
+  // 是否启用字体连字
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "normal",
+  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontSize": 13,
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.fontWeightBold": "bold",
+  "terminal.integrated.fontFamily": "Fira Code",
+  "interactiveSession.editor.fontFamily": "Fira Code",
+  // 控制渲染字体的方式，auto为判断是否是高dpi屏来决定如何渲染
+  "workbench.fontAliasing": "auto",
   // volume
   "audioCues.volume": 0,
-  
   // debug
   "debug.onTaskErrors": "debugAnyway",
-  "debug.console.fontFamily": "Fira Code",
   "debug.allowBreakpointsEverywhere": true,
-
   // extensions
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
   "vsicons.dontShowNewVersionMessage": true,
-
   // eslint
   "eslint.quiet": true,
   // ESLint要验证的语言
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "html",
-    "css",
-    "scss",
-    "less",
-    "json",
-    "markdown",
-    "mpx"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "css", "scss", "less", "json", "markdown", "mpx"],
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
-
   // eslint with editor
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
-    "source.fixAll.eslint": true,
+    "source.fixAll.eslint": false,
     "source.organizeImports": false
   },
-
+  "editor.formatOnSave": true,
   // spell check
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,en-US",
@@ -164,6 +155,8 @@
     "autofetch",
     "Autosize",
     "bincode",
+    "bson",
+    "bwits",
     "Codicon",
     "Colorspace",
     "contextkey",
@@ -180,26 +173,31 @@
     "fontsize",
     "freecodecamp",
     "fullscreen",
+    "htmlex",
+    "httpie",
     "icns",
     "keydown",
     "KHTML",
     "nestjs",
     "objc",
     "OPENAI",
+    "openpyxl",
     "pdfplumber",
     "pixmap",
     "proptest",
+    "pymongo",
     "quickcheck",
     "reqwest",
     "Tauri",
+    "tqdm",
     "typeorm",
     "unlisten",
     "unmaximize",
     "unminimize",
     "UPTODATE",
+    "uvicorn",
     "VSIX"
   ],
-
   // copilot
   "github.copilot.enable": {
     "*": true,
@@ -210,7 +208,6 @@
     "typescript": true,
     "python": true
   },
-
   // 文件树折叠功能，参考：https://github.com/antfu/vscode-file-nesting-config
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
@@ -275,8 +272,6 @@
     "vite.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
     "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*"
   },
-
-
   // js ts
   "prettier.enable": true,
   "prettier.printWidth": 200,
@@ -288,20 +283,21 @@
   "eslint.packageManager": "pnpm",
   "stylelint.packageManager": "pnpm",
   "npm.packageManager": "pnpm",
-
-
   // python
   "python.languageServer": "Pylance",
-  "python.analysis.autoImportCompletions": true,
-  "python.autoComplete.extraPaths": [
-    "${workspaceFolder}/venv"
-  ],
+  "python.autoComplete.extraPaths": ["${workspaceFolder}/venv"],
   "python.linting.flake8Enabled": true,
-  "python.linting.flake8Args": ["--max-line-length=200"],
-
-
-  // formatter
+  "python.linting.flake8Args": ["--max-line-length=110"],
+  // formatter"
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length", "110"],
   "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
     "editor.formatOnType": true
   },
   "[typescriptreact]": {
@@ -311,6 +307,20 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "python.analysis.extraPaths": ["${workspaceFolder}/venv"],
+  "editor.unicodeHighlight.allowedLocales": {
+    "zh-hans": true,
+    "_os": true,
+    "_vscode": true
+  },
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.exclude": {
+    "**/.git": false,
+    "**/ggit": true
+  },
+  "screencastMode.fontSize": 40,
+  "screencastMode.onlyKeyboardShortcuts": true,
+  "window.zoomLevel": 1
 }
