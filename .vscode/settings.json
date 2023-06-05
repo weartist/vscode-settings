@@ -7,6 +7,7 @@
   "editor.minimap.enabled": false,
   "editor.guides.bracketPairs": "active",
   "editor.cursorSurroundingLines": 5,
+  "editor.rulers":[140],
   "editor.maxTokenizationLineLength": 1000000000000000000000000000000000000,
   "files.autoSave": "onWindowChange",
   // "files.autoSaveDelay": 3000,
@@ -98,11 +99,12 @@
   // vscode theme color format https://code.visualstudio.com/api/references/theme-color#color-formats
   "workbench.colorCustomizations": {
     "editor.selectionBackground": "#b5d69b", //选中高亮
-    "editor.stackFrameHighlightBackground": "#fff27f7d",
-    "editor.selectionHighlightBorder": "#28a6c5",
-    "editorCursor.foreground": "#657b83",
-    "tab.activeBackground": "#b5d69b",
-    "tab.activeBorderTop": "#00000000"
+    "editor.selectionHighlightBorder": "#28a6c5", //选中高亮边框
+    "editorCursor.foreground": "#657b83", //光标颜色
+    "tab.activeBackground": "#b5d69b", //选中标签页背景色
+    "tab.activeBorderTop": "#00000000", //选中标签页上边框
+    "editor.stackFrameHighlightBackground": "#fff27f7d", //调试时当前行高亮
+    "editor.focusedStackFrameHighlightBackground": "#fff27f7d" //调试时当前行高亮
     // "editor.background": "#fdf6e3",
     // "tab.hoverBackground": "#fdf6e3",
     // "sideBar.background": "#fdf6e3",
@@ -120,6 +122,7 @@
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.fontWeightBold": "bold",
   "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontSize": 13,
   "interactiveSession.editor.fontFamily": "Fira Code",
   // 控制渲染字体的方式，auto为判断是否是高dpi屏来决定如何渲染
   "workbench.fontAliasing": "auto",
@@ -135,17 +138,29 @@
   // eslint
   "eslint.quiet": true,
   // ESLint要验证的语言
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "css", "scss", "less", "json", "markdown", "mpx"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "css",
+    "scss",
+    "less",
+    "json",
+    "markdown",
+    "mpx"
+  ],
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
   // eslint with editor
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
-    "source.fixAll.eslint": false,
-    "source.organizeImports": false
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
   },
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   // spell check
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,en-US",
@@ -160,6 +175,7 @@
     "Codicon",
     "Colorspace",
     "contextkey",
+    "curv",
     "cwds",
     "deadcode",
     "easyocr",
@@ -185,6 +201,7 @@
     "pdfplumber",
     "pixmap",
     "proptest",
+    "pwsh",
     "pymongo",
     "quickcheck",
     "reqwest",
@@ -273,10 +290,6 @@
     "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*"
   },
   // js ts
-  "prettier.enable": true,
-  "prettier.printWidth": 200,
-  "prettier.singleQuote": true,
-  "prettier.semi": false,
   "javascript.preferences.importModuleSpecifier": "project-relative",
   "typescript.preferences.importModuleSpecifier": "project-relative",
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -293,12 +306,12 @@
   "python.formatting.blackArgs": ["--line-length", "110"],
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.insertSpaces": true,
+    "editor.insertSpaces": false,
     "editor.tabSize": 4,
     "editor.formatOnSaveMode": "file",
     "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
-    "editor.formatOnType": true
+    "editor.formatOnType": false
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -322,5 +335,13 @@
   },
   "screencastMode.fontSize": 40,
   "screencastMode.onlyKeyboardShortcuts": true,
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "git.terminalAuthentication": false,
+
+  // prettier
+  "prettier.printWidth": 100,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "editor.showUnused": false
 }
